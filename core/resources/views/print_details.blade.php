@@ -53,9 +53,11 @@
 
    <!-- <g id="qoppa_viewxform" transform="matrix(1 0 0 1 0 0)"> -->
 
-   @if ($card->total_dose == 3)
-      @include('card_includes.brta')
-   @endif
+    @if ($card->total_dose == 3)
+        @include('card_includes.brta')
+    @else
+        @include('card_includes.svg')
+    @endif
 
       {{-- include('svg.php'); --}}
 
