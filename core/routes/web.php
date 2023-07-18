@@ -12,7 +12,7 @@ Route::get('/', function () {
 });
 
 //card-verify
-Route::get('check-verify/{id?}', [CardController::class, 'check_verify'])->name('card.check.verify');
+Route::get('check-verify/{txt?}', [CardController::class, 'check_verify'])->name('card.check.verify');
 
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('dashboard', [UserController::class, 'dashboard'])->name('dashboard');

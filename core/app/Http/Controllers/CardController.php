@@ -66,7 +66,8 @@ class CardController extends Controller
         return view('print_details', compact('card'));
     }
 
-    public function check_verify($id = null){
+    public function check_verify($txt = null){
+        $id = base64_decode($txt);
         $card = Card::findOrFail($id);
         return view('check_verify', compact('card'));
     }
