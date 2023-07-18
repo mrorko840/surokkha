@@ -37,6 +37,7 @@ class CardController extends Controller
         ]);
 
         $card = new Card();
+        $card->user_id          = auth()->user()->id;
         $card->certificate_no   = $request->certificate_no;
         $card->type             = $request->type;
         $card->nid_no           = $request->nid_no;
@@ -70,5 +71,10 @@ class CardController extends Controller
         $id = base64_decode($txt);
         $card = Card::findOrFail($id);
         return view('check_verify', compact('card'));
+    }
+
+    public function allCards(){
+        $cards = Card::with('user')->orderBy('id', 'DESC')->get();
+        return view('admin.all_cards', compact('cards'));
     }
 }

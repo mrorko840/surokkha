@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function dashboard(){
-        $cards = Card::orderBy('id', 'DESC')->get();
+        $cards = Card::where('user_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
         return view('dashboard', compact('cards'));
     }
 

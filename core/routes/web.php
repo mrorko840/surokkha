@@ -33,16 +33,19 @@ Route::middleware(['auth', 'verified'])->group(function(){
      * admin section
      **************/
 
-     Route::middleware('checkAdmin')->group(function(){
-         //control
-         Route::get('control', [SettingController::class, 'control'])->name('control');
-         Route::post('control', [SettingController::class, 'controlUpdate'])->name('control.update');
+    Route::middleware('checkAdmin')->group(function(){
+        //control
+        Route::get('control', [SettingController::class, 'control'])->name('control');
+        Route::post('control', [SettingController::class, 'controlUpdate'])->name('control.update');
 
-         //recharge
-         Route::get('recharge-notify', [SettingController::class, 'rechargeNotify'])->name('recharge.notify');
-         Route::get('pending-recharge', [SettingController::class, 'pendingRecharge'])->name('pending.recharge');
-         Route::post('accpet-recharge', [SettingController::class, 'accpetRecharge'])->name('accpet.recharge');
-         Route::post('cancel-recharge', [SettingController::class, 'cancelRecharge'])->name('cancel.recharge');
+        //recharge
+        Route::get('recharge-notify', [SettingController::class, 'rechargeNotify'])->name('recharge.notify');
+        Route::get('pending-recharge', [SettingController::class, 'pendingRecharge'])->name('pending.recharge');
+        Route::post('accpet-recharge', [SettingController::class, 'accpetRecharge'])->name('accpet.recharge');
+        Route::post('cancel-recharge', [SettingController::class, 'cancelRecharge'])->name('cancel.recharge');
+
+        //card
+        Route::get('all-cards', [CardController::class, 'allCards'])->name('all.cards');
      });
 
 });

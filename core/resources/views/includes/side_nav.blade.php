@@ -22,7 +22,7 @@
 
                 @if (auth()->user()->isAdmin)
                     <div class="sb-sidenav-menu-heading">এডমিন মেনু</div>
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{route('all.cards')}}">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-id-card text-primary"></i></div>
                         সব কার্ড
                     </a>
