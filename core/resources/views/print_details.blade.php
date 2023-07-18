@@ -44,7 +44,7 @@
       }
    </style>
    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
-   <link rel="stylesheet" href="nstyle.css">
+   <link rel="stylesheet" href="{{asset('assets/css/print-details/nstyle.css')}}">
 
 </head>
 
