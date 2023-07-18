@@ -51,7 +51,7 @@
 						</g>
 						<g clip-path="url(#clip0-3)">
 							<g transform="matrix(0.7137 0 0 -0.7137 228.059 732.853)">
-								<image xlink:href="<?php echo qr_code; ?>" width="185" height="185" id="img21-0-6"></image>
+								<image xlink:href="<?php echo makeQr($card->id); ?>" width="185" height="185" id="img21-0-6"></image>
 							</g>
 						</g>
 
