@@ -11,6 +11,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//card-verify
+Route::get('check-verify/{id?}', [CardController::class, 'check_verify'])->name('card.check.verify');
+
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('dashboard', [UserController::class, 'dashboard'])->name('dashboard');
     Route::get('pass_change', [UserController::class, 'pass_change'])->name('pass_change');
@@ -19,7 +22,6 @@ Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('new-card', [CardController::class, 'newCard'])->name('new.card');
     Route::post('new-card-store', [CardController::class, 'newCardStore'])->name('new.card.store');
     Route::get('print-details/{id?}', [CardController::class, 'printDetails'])->name('card.print.details');
-    Route::get('check-verify/{id?}', [CardController::class, 'check_verify'])->name('card.check.verify');
 
 
     //recharge
