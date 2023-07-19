@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Card;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -14,5 +15,10 @@ class UserController extends Controller
 
     public function pass_change(){
         return view('pass_change');
+    }
+
+    public function allUsers(){
+        $users = User::orderBy('id', 'DESC')->get();
+        return view('admin.all_users',compact('users'));
     }
 }

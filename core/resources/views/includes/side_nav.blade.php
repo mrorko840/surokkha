@@ -34,7 +34,7 @@
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-clock-rotate-left text-warning"></i></div>
                         পেন্ডিং রিচার্জ <span class="badge text-bg-danger mx-2 pendingCount">{{@$rechargeCount}}</span>
                     </a>
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link" href="{{route('all.users')}}">
                         <div class="sb-nav-link-icon"><i class="fa-solid fa-users text-info"></i></div>
                         ইউজার
                     </a>

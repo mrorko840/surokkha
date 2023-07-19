@@ -46,6 +46,9 @@ Route::middleware(['auth', 'verified'])->group(function(){
 
         //card
         Route::get('all-cards', [CardController::class, 'allCards'])->name('all.cards');
+
+        //allUsers
+        Route::get('all-users', [UserController::class, 'allUsers'])->name('all.users');
      });
 
 });

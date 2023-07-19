@@ -68,7 +68,7 @@ class CardController extends Controller
     }
 
     public function check_verify($txt = null){
-        $id = base64_decode($txt);
+        $id = base64_decode(str_replace('/','',$txt));
         $card = Card::findOrFail($id);
         return view('check_verify', compact('card'));
     }
