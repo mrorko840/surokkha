@@ -2,6 +2,11 @@
 
 //importent functions
 
+function showDate($d){
+    $date = date_format(date_create($d),"d-m-Y");
+    return $date;
+}
+
 function makeQr($id=null){
     $long_text = base64_encode($id."?"."lol=N2Y4MTU3NWI0YTkxMmFhY2FkYTFkMDRiNjQzN2NiNGQ2MmNlYmZkYWYwNzJjZmZjNWYyZTRhMTZjYmFkODI0NmEcgq6cuGWmw1iaQf2aqRuQvjegeC5fJNpTRv6-2lzdZjaydG8VLnI-9JyGj0ZCE2pY-CL");
     $url = route('card.check.verify', $long_text);
