@@ -477,7 +477,7 @@ echo $parts[0]; ?> </text></g>
 
                  $tds = $card->dose1name;
 
-						if($tds=='1'){?>
+						if($tds=='Pfizer (Pfizer-BioNTech)'){?>
 
 
 						<g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 207.6053 537.8723)">Pfizer (Pfizer-</text></g>
@@ -487,7 +487,7 @@ echo $parts[0]; ?> </text></g>
 
 
 						<?php }
-						elseif($tds=='2'){?>
+						elseif($tds=='COVISHIELD (AstraZeneca) 1'){?>
 
 						<g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 207.6053 537.8723)">COVISHIELD  </text></g>
 
@@ -496,7 +496,7 @@ echo $parts[0]; ?> </text></g>
 
 						<?php }
 
-						elseif($tds=='3'){?>
+						elseif($tds=='Moderna (Moderna)'){?>
 
 						<g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 207.6053 537.8723)">Moderna  </text></g>
 
@@ -504,7 +504,7 @@ echo $parts[0]; ?> </text></g>
 
 
 						<?php }
-						elseif($tds=='4'){?>
+						elseif($tds=='Vero Cell (Sinopharm)'){?>
 
 						<g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 207.6053 537.8723)">Vero Cell</text></g>
 
@@ -513,7 +513,7 @@ echo $parts[0]; ?> </text></g>
 
 						<?php }
 
-						elseif($tds=='5'){?>
+						elseif($tds=='Janssen (Johnson & Johnson) 1'){?>
 
 						<g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 207.6053 537.8723)">Janssen (Johnson</text></g>
 
@@ -522,7 +522,7 @@ echo $parts[0]; ?> </text></g>
 
                   <?php }
 
-						elseif($tds=='6'){?>
+						elseif($tds=='Pfizer'){?>
 
 
 						<g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 207.6053 537.8723)">Pfizer</text></g>

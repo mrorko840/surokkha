@@ -1452,8 +1452,8 @@
     <span class="g  g18v"><?php
                             $vacc_center = $card->vaccin_center;
                             $split = explode(" ", $vacc_center);
-                            $newArray = array_slice($split, 0, 3);
-                            $last = array_slice($split, 3, 3);
+                            $newArray = array_slice($split, 0, 2);
+                            $last = array_slice($split, 2, 3);
                             $hos = implode(' ', $newArray);
                             $host_last = implode(' ', $last);
                             echo $hos;
