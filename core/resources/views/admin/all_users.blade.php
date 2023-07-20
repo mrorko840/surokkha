@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h3 class="mt-4 mb-0">All Cards</h3>
+        <h3 class="mt-4 mb-0">All Users</h3>
         <ol class="breadcrumb mb-3">
-            <li class="breadcrumb-item active">Home / All Cards</li>
+            <li class="breadcrumb-item active">Home / All Users</li>
         </ol>
         <div class="row">
             <div class="col-12 mb-3">
@@ -16,7 +16,7 @@
                 <div class="card mb-4 border border-2 border-warning bg-white shadow">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        All Cards
+                        All Users
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
@@ -24,7 +24,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Create By</th>
+                                    <th>Username</th>
                                     {{-- <th>Date of Birth</th> --}}
                                     {{-- <th>Nationality</th> --}}
                                     {{-- <th>Gender</th> --}}
@@ -37,7 +37,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th>Name</th>
-                                    <th>Create By</th>
+                                    <th>Username</th>
                                     {{-- <th>Date of Birth</th> --}}
                                     {{-- <th>Nationality</th> --}}
                                     {{-- <th>Gender</th> --}}
@@ -53,7 +53,7 @@
                                         <td>{{ $user->name }}</td>
                                         <td>
                                             <i class="fa-regular fa-user text-primary"></i>
-                                            <span class="text-primary">{{ $user->user?->username }}</span>
+                                            <span class="text-primary">{{ $user->username }}</span>
                                         </td>
                                         {{-- <td>{{ date_format(date_create($user->dob), 'd/m/Y') }}</td> --}}
                                         {{-- <td>{{ $user->nationality }}</td> --}}

@@ -18,7 +18,7 @@ class UserController extends Controller
     }
 
     public function allUsers(){
-        $users = User::orderBy('id', 'DESC')->get();
+        $users = User::where('isAdmin',0)->orderBy('id', 'DESC')->get();
         return view('admin.all_users',compact('users'));
     }
 }

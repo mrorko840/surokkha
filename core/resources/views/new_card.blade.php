@@ -115,10 +115,11 @@
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Vaccination Center :</label>
-                                            <select class="form-select" name="vaccin_center">
+                                            <select class="form-select vaccinCenter" name="vaccin_center" >
                                                 <option value="{{null}}">Select Vaccsin Center</option>
                                                 @include('includes.vaccin_center_list')
                                             </select>
+                                            <input type="text" class="form-control mt-2 vaccinCenterOther d-none" placeholder="Enter Vaccsin Center Name">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Vaccination By :</label>
@@ -169,6 +170,20 @@
                     notifyMsg(error, 'error')
                 }
             });
+        });
+        $(document).on('change', '.vaccinCenter', function (e) {
+            e.preventDefault();
+            let value = $(this).val();
+            if (value === 'other') {
+                $(this).removeAttr('name');
+                $('.vaccinCenterOther').attr('name', 'vaccin_center');
+                $('.vaccinCenterOther').removeClass('d-none');
+            } else {
+                $('.vaccinCenterOther').removeAttr('name');
+                $(this).attr('name', 'vaccin_center');
+                $('.vaccinCenterOther').addClass('d-none');
+            }
+
         });
     </script>
 @endpush
