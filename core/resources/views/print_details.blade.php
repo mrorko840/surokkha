@@ -543,7 +543,7 @@ echo $parts[0]; ?> </text></g>
 
 
                   <g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 155.0903 514.7693)" x="0 0.611 1.167 1.445 2.001 2.223 2.501 3.223 3.779 4.279 4.835">Total Doses</text></g>
-                  <g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6053 514.7693)" x="0"> <?php echo $card->dose1name; ?> </text></g>
+                  <g clip-path="url(#clip0-70)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6053 514.7693)" x="0"> <?php echo $card->total_dose; ?> </text></g>
                </g>
             </svg>
          </svg>
