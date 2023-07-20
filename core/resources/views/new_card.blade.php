@@ -65,7 +65,7 @@
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Date of Birth :</label>
-                                            <input type="date" class="form-control" name="dob">
+                                            <input type="text" class="form-control" name="dob" placeholder="dd-mm-yyyy">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Gender :</label>
@@ -82,7 +82,7 @@
                                         <h5 class="mb-3 text-center text-decoration-underline">Vaccination Details</h5>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Date of vaccination (Dose 1):</label>
-                                            <input type="date" class="form-control" name="dose1date">
+                                            <input type="text" placeholder="dd-mm-yyyy" class="form-control" name="dose1date">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Name Of Vaccine (Dose 1) :</label>
@@ -93,7 +93,7 @@
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Date of vaccination (Dose 2):</label>
-                                            <input type="date" class="form-control" name="dose2date">
+                                            <input type="text" placeholder="dd-mm-yyyy" class="form-control" name="dose2date">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Name Of Vaccine (Dose 2) :</label>
@@ -104,7 +104,7 @@
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Date of vaccination (Dose 3):</label>
-                                            <input type="date" class="form-control" name="dose3date">
+                                            <input type="text" placeholder="dd-mm-yyyy" class="form-control" name="dose3date">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Name Of Vaccine (Dose 3) :</label>
@@ -125,9 +125,19 @@
                                             <label class="form-label mb-1 ms-1">Vaccination By :</label>
                                             <input type="text" class="form-control" name="vaccin_by" value="Directorate General of Health Services (DGHS)">
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        {{-- <div class="col-md-6 mb-3">
                                             <label class="form-label mb-1 ms-1">Total Dose Given :</label>
                                             <input type="text" class="form-control" name="total_dose">
+                                        </div> --}}
+                                        <div class="col-md-6 mb-3">
+                                            <label class="form-label mb-1 ms-1">Total Dose Given :</label>
+                                            <select class="form-select" name="total_dose">
+                                                <option value="{{null}}">Select Total Dose Given</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

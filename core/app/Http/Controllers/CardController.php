@@ -45,13 +45,13 @@ class CardController extends Controller
         $card->passport_no      = $request->passport_no;
         $card->nationality      = $request->nationality;
         $card->name             = $request->name;
-        $card->dob              = $request->dob;
+        $card->dob              = date_create($request->dob);
         $card->gender           = $request->gender;
-        $card->dose1date        = $request->dose1date;
+        $card->dose1date        = date_create($request->dose1date);
         $card->dose1name        = $request->dose1name;
-        $card->dose2date        = $request->dose2date;
+        $card->dose2date        = date_create($request->dose2date);
         $card->dose2name        = $request->dose2name;
-        $card->dose3date        = $request->dose3date;
+        $card->dose3date        = date_create($request->dose3date);
         $card->dose3name        = $request->dose3name;
         $card->vaccin_center    = $request->vaccin_center;
         $card->vaccin_by        = $request->vaccin_by;
