@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Surokkha - Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
+    <!-- Favicons -->
+    <link href="{{asset('assets/image/logo/favicon.png')}}" rel="icon">
+    <link href="{{asset('assets/image/logo/favicon.png')}}" rel="apple-touch-icon">
     <style>
         :root {
             --main-bg: #e91e63;

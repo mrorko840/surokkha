@@ -52,5 +52,55 @@
             color: #012970;
             font-family: "Bangla259", sans-serif;
         }
+
+        /* button-sections */
+        .btn-orange{
+            color: #fff;
+            background: #ff5500;
+            border: 1px solid #ff5500;
+            box-shadow: 0 4px 5px rgb(255 86 2 / 70%) !important;
+        }
+        .btn-orange:hover {
+            color: #fff;
+            background: #d54700;
+            border: 1px solid #d54700;
+            box-shadow: 0 4px 5px #d5470096 !important;
+        }
+        .btn-success{
+            color: #fff;
+            background: #198754;
+            border: 1px solid #198754;
+            box-shadow: 0 4px 5px rgb(26 135 84 / 70%) !important;
+        }
+        .btn-success:hover {
+            color: #fff;
+            background: #12633d;
+            border: 1px solid #12633d;
+            box-shadow: 0 4px 5px #12633d96 !important;
+        }
+        .btn-danger{
+            color: #fff;
+            background: #ed1d32;
+            border: 1px solid #ed1d32;
+            box-shadow: 0 4px 5px rgb(237 28 49 / 70%) !important;
+        }
+        .btn-danger:hover {
+            color: #fff;
+            background: #bf1829;
+            border: 1px solid #bf1829;
+            box-shadow: 0 4px 5px #bf182996 !important;
+        }
+        .btn-info{
+            color: #fff;
+            background: #0dcaf0;
+            border: 1px solid #0dcaf0;
+            box-shadow: 0 4px 5px rgb(17 202 240 / 70%) !important;
+        }
+        .btn-info:hover {
+            color: #fff;
+            background: #0ba8c8;
+            border: 1px solid #0ba8c8;
+            box-shadow: 0 4px 5px #0ba8c896 !important;
+        }
     </style>
 </head>

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>New Age - Start Bootstrap Theme</title>
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/welcome/assets/favicon.ico')}}" />
+    <title>Surokkha</title>
+    <!-- Favicons -->
+    <link href="{{asset('assets/image/logo/favicon.png')}}" rel="icon">
+    <link href="{{asset('assets/image/logo/favicon.png')}}" rel="apple-touch-icon">
+
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Google fonts-->

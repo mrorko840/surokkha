@@ -21,4 +21,11 @@ class UserController extends Controller
         $users = User::where('isAdmin',0)->orderBy('id', 'DESC')->get();
         return view('admin.all_users',compact('users'));
     }
+
+    public function deleteUser($id = null){
+        $user = User::find($id);
+        $user->delete();
+        $notify[] = ['success','User Deleted Success!'];
+        return back()->withNotify($notify);
+    }
 }

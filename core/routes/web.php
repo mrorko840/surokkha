@@ -49,7 +49,10 @@ Route::middleware(['auth', 'verified'])->group(function(){
 
         //allUsers
         Route::get('all-users', [UserController::class, 'allUsers'])->name('all.users');
+        Route::get('delete-user/{id}', [UserController::class, 'deleteUser'])->name('delete.user');
         Route::post('add-balance', [SettingController::class, 'addBalance'])->name('add.balance');
+        Route::post('set-cost', [SettingController::class, 'setCost'])->name('set.cost');
+        Route::post('set-cost-all', [SettingController::class, 'setCostAll'])->name('set.cost.all');
 
      });
 

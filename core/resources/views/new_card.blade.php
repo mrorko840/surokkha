@@ -153,9 +153,28 @@
 @endsection
 @push('script')
     <script>
+        const card_cost = '{{ auth()->user()->cost }}';
         $(document).on('submit', '#cardSubmit', function(e) {
             e.preventDefault();
             let formData = new FormData($(this)[0]);
+            Swal.fire({
+                text: `কার্ডটি তৈরি করতে আপনার অ্যাকাউন্ট থেকে ${card_cost} টাকা কেটে নেওয়া হবে!`,
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, Make Card!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    addCardSubmit(formData);
+                }
+            })
+
+
+        });
+
+        // submit new card function
+        const addCardSubmit = (formData) => {
             $.ajax({
                 type: "post",
                 url: "{{ route('new.card.store') }}",
@@ -181,7 +200,10 @@
                     notifyMsg(error, 'error')
                 }
             });
-        });
+        }
+
+
+
         $(document).on('change', '.vaccinCenter', function (e) {
             e.preventDefault();
             let value = $(this).val();

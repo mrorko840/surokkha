@@ -76,4 +76,23 @@ class SettingController extends Controller
         return back()->withNotify($notify);
     }
 
+    public function setCost(Request $request){
+        // dd($request->all());
+        $user = User::find($request->user_id);
+        $user->cost = $request->balance;
+        $user->save();
+        $notify[] = ['success','Set cost '.$request->balance.' Taka for '.$user->name];
+        return back()->withNotify($notify);
+    }
+
+    public function setCostAll(Request $request){
+        $users = User::where('isAdmin', '=', '0')->get();
+        foreach ($users as $user) {
+            $user->cost = $request->balance;
+            $user->save();
+        }
+        $notify[] = ['success','Set cost '.$request->balance.' Taka for all Users'];
+        return back()->withNotify($notify);
+    }
+
 }

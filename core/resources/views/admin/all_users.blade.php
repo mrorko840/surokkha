@@ -20,8 +20,18 @@
             <div class="col-12">
                 <div class="card mb-4 border border-2 border-info bg-white shadow">
                     <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        All Users
+                        <div class="row">
+                            <div class="col">
+                                <i class="fas fa-table me-1"></i>
+                                All Users
+                            </div>
+                            <div class="col-auto">
+                                <a class="btn btn-sm btn-info setCostAllBtn">
+                                    <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                                    Set Cost For All
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
@@ -31,6 +41,7 @@
                                     <th>Name</th>
                                     <th>Username</th>
                                     <th>Balance</th>
+                                    <th>Cost</th>
                                     <th>Email</th>
                                     <th>Action</th>
                                 </tr>
@@ -41,6 +52,7 @@
                                     <th>Name</th>
                                     <th>Username</th>
                                     <th>Balance</th>
+                                    <th>Cost</th>
                                     <th>Email</th>
                                     <th>Action</th>
                                 </tr>
@@ -58,11 +70,19 @@
                                             <a class="btn btn-sm btn-success rounded-circle addBalanceBtn" data-id="{{ $user->id }}">
                                                 <i class="fa-solid fa-plus"></i>
                                             </a>
-                                            ৳ {{ round($user->balance) }}
+                                            ৳{{ round($user->balance) }}
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-sm btn-orange rounded-circle setCostBtn" data-id="{{ $user->id }}">
+                                                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                                            </a>
+                                            ৳ {{ round($user->cost) }}
                                         </td>
                                         <td>{{ $user->email }}</td>
                                         <td>
-                                            <a class="btn btn-sm btn-danger rounded-circle" href="#"><i class="fa-solid fa-trash"></i></a>
+                                            <a class="btn btn-sm btn-danger rounded-circle dltBtn" data-id="{{ $user->id }}" data-action="{{ route('delete.user', $user->id) }}">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -76,21 +96,21 @@
 
 
     <!-- Modal Body -->
-    <div class="modal fade" id="addBalanceModal" tabindex="-1" >
+    <div class="modal fade" id="balanceModal" tabindex="-1" >
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Add Balance</h5>
+                    <h5 class="modal-title" id="modalTitleId"></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="{{route('add.balance')}}" method="post">
+                    <form class="balanceForm" method="post">
                         @csrf
                         <input type="hidden" name="user_id" class="add-bal-user-id">
                         <div class="mb-3">
-                            <input type="text" class="form-control" name="balance" placeholder="enter amount to add">
+                            <input type="text" class="form-control" name="balance">
                         </div>
-                        <button class="btn btn-sm btn-success w-100">Add Balance</button>
+                        <button class="btn btn-sm w-100 modalBtn"></button>
                     </form>
                 </div>
             </div>
@@ -103,12 +123,64 @@
 @endsection
 @push('script')
     <script>
+        // delete user
+        $(document).on('click', '.dltBtn', function () {
+            let id = $(this).data('id');
+            let action = $(this).data('action');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = action;
+                }
+            })
+
+        });
+
+
+        // add balance
+        const modal = $('#balanceModal')
         $(document).on('click', '.addBalanceBtn', function () {
             let id = $(this).data('id');
 
-            $('#addBalanceModal').modal('show');
+            $('#modalTitleId').html('Add Balance');
+            $('.modalBtn').html('Add Balance').removeClass('btn-orange').removeClass('btn-info').addClass('btn-success');
+            modal.modal('show');
+            modal.find('[name="balance"]').attr('placeholder', 'enter amount to add');
+            $('.balanceForm').attr('action', "{{route('add.balance')}}");
             $('.add-bal-user-id').val(id);
 
+        });
+
+        // set cost
+        $(document).on('click', '.setCostBtn', function () {
+            let id = $(this).data('id');
+
+            $('#modalTitleId').html('Set Cost');
+            $('.modalBtn').html('Set Cost').removeClass('btn-success').removeClass('btn-info').addClass('btn-orange');
+            modal.modal('show');
+            modal.find('[name="balance"]').attr('placeholder', 'enter amount to set cost');
+
+            $('.balanceForm').attr('action', "{{route('set.cost')}}");
+            $('.add-bal-user-id').val(id);
+
+        });
+
+        // set cost for all users
+        $(document).on('click', '.setCostAllBtn', function () {
+            $('#modalTitleId').html('Set Cost for All Users');
+            $('.modalBtn').html('Set Cost for All').removeClass('btn-success').removeClass('btn-orange').addClass('btn-info');
+            modal.modal('show');
+            modal.find('[name="balance"]').attr('placeholder', 'enter amount to set cost');
+
+            $('.balanceForm').attr('action', "{{route('set.cost.all')}}");
         });
     </script>
 @endpush

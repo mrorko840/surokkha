@@ -8,12 +8,12 @@
         </ol>
         <div class="row">
             <div class="col-12 mb-3">
-                <marquee class="p-3 bg-white rounded border border-2 border-warning">
+                <marquee class="p-3 bg-white rounded border border-2 border-primary">
                     {{ @$control->site_notice }}
                 </marquee>
             </div>
             <div class="col-12">
-                <div class="card mb-4 border border-2 border-warning bg-white shadow">
+                <div class="card mb-4 border border-2 border-primary bg-white shadow">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
                         All Cards
