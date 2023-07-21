@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="{{ asset('assets/global/css/iziToast.min.css') }}">
 <script src="{{ asset('assets/global/js/iziToast.min.js') }}"></script>
-{{-- @if (session()->has('notify'))
+@if (session()->has('notify'))
     @foreach (session('notify') as $msg)
         <script>
             "use strict";
@@ -27,7 +27,7 @@
             });
         @endforeach
     </script>
-@endif --}}
+@endif
 <script>
     "use strict";
 

@@ -1,6 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
+
+    <!-- notify -->
+    @include('includes.notify')
+
+
     <div class="container-fluid px-4">
         <h3 class="mt-4 mb-0">All Users</h3>
         <ol class="breadcrumb mb-3">
@@ -25,11 +30,8 @@
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Username</th>
-                                    {{-- <th>Date of Birth</th> --}}
-                                    {{-- <th>Nationality</th> --}}
-                                    {{-- <th>Gender</th> --}}
-                                    <th>Certificate No</th>
-                                    <th>Created</th>
+                                    <th>Balance</th>
+                                    <th>Email</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -38,11 +40,8 @@
                                     <th>#</th>
                                     <th>Name</th>
                                     <th>Username</th>
-                                    {{-- <th>Date of Birth</th> --}}
-                                    {{-- <th>Nationality</th> --}}
-                                    {{-- <th>Gender</th> --}}
-                                    <th>Certificate No</th>
-                                    <th>Created</th>
+                                    <th>Balance</th>
+                                    <th>Email</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
@@ -55,15 +54,15 @@
                                             <i class="fa-regular fa-user text-primary"></i>
                                             <span class="text-primary">{{ $user->username }}</span>
                                         </td>
-                                        {{-- <td>{{ date_format(date_create($user->dob), 'd/m/Y') }}</td> --}}
-                                        {{-- <td>{{ $user->nationality }}</td> --}}
-                                        {{-- <td>{{ $user->gender }}</td> --}}
-                                        <td><b>#{{ $user->certificate_no }}</b></td>
-                                        <td>{{ date_format(date_create($user->created_at), 'd/m/Y') }}</td>
                                         <td>
-                                            <a class="btn btn-sm btn-danger rounded-circle" href="#">
-                                                <i class="fa-solid fa-trash"></i>
+                                            <a class="btn btn-sm btn-success rounded-circle addBalanceBtn" data-id="{{ $user->id }}">
+                                                <i class="fa-solid fa-plus"></i>
                                             </a>
+                                            ৳ {{ round($user->balance) }}
+                                        </td>
+                                        <td>{{ $user->email }}</td>
+                                        <td>
+                                            <a class="btn btn-sm btn-danger rounded-circle" href="#"><i class="fa-solid fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -74,4 +73,42 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Modal Body -->
+    <div class="modal fade" id="addBalanceModal" tabindex="-1" >
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitleId">Add Balance</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{route('add.balance')}}" method="post">
+                        @csrf
+                        <input type="hidden" name="user_id" class="add-bal-user-id">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" name="balance" placeholder="enter amount to add">
+                        </div>
+                        <button class="btn btn-sm btn-success w-100">Add Balance</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
 @endsection
+@push('script')
+    <script>
+        $(document).on('click', '.addBalanceBtn', function () {
+            let id = $(this).data('id');
+
+            $('#addBalanceModal').modal('show');
+            $('.add-bal-user-id').val(id);
+
+        });
+    </script>
+@endpush

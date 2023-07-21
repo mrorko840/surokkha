@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Setting;
 use App\Models\Recharge;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SettingController extends Controller
 {
@@ -64,6 +65,15 @@ class SettingController extends Controller
         $recharge = Recharge::where('status', 2)->orderBy('id', 'DESC')->get();
         $rechargeCount = Recharge::where('status', 2)->count();
         return response()->json(['cls'=>'success', 'count'=>$rechargeCount, 'data'=>$recharge]);
+    }
+
+    public function addBalance(Request $request){
+        // dd($request->all());
+        $user = User::find($request->user_id);
+        $user->balance += $request->balance;
+        $user->save();
+        $notify[] = ['success',$request->balance.' Taka Add to '.$user->name];
+        return back()->withNotify($notify);
     }
 
 }

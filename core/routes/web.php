@@ -49,6 +49,8 @@ Route::middleware(['auth', 'verified'])->group(function(){
 
         //allUsers
         Route::get('all-users', [UserController::class, 'allUsers'])->name('all.users');
+        Route::post('add-balance', [SettingController::class, 'addBalance'])->name('add.balance');
+
      });
 
 });

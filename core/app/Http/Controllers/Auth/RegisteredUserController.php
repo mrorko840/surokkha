@@ -50,7 +50,7 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
-        session('notify', 'login');
+        // session('notify', 'login');
         // $notify[] = ['success','Login Seccessfull!'];
         return redirect(RouteServiceProvider::HOME);
     }
