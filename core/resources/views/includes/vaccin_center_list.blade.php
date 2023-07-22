@@ -56,6 +56,7 @@
 <option value="Upazila Health Complex, Anowara">Upazila Health Complex, Anowara</option>
 <option value="Upazila Health Complex, Karnafuli">Upazila Health Complex, Karnafuli</option>
 <option value="Upazila Health Complex, Hathazari">Upazila Health Complex, Hathazari</option>
+<option value="Upazila Health Complex, Chandina">Upazila Health Complex, Chandina</option>
 <option value="Barisal (sadar) Upazila Health Office">Barisal (sadar) Upazila Health Office</option>
 <option value="Zilla Sadar Hospital, Barisal">Zilla Sadar Hospital, Barisal</option>
 <option value="Police Hospital, Barisal">Police Hospital, Barisal</option>
@@ -108,14 +109,12 @@
 <option value="Patuakhali 250 bed Sadar Hospital">Patuakhali 250 bed Sadar Hospital</option>
 <option value="Pirojpur District Hospital">Pirojpur District Hospital</option>
 <option value="Rajbari General Hospital">Rajbari General Hospital</option>
-<option value="Department Of Orthopedic Surgery And Traumatology (Gent's)">Department Of Orthopedic Surgery And
-    Traumatology (Gent's)</option>
+<option value="Department Of Orthopedic Surgery And Traumatology (Gent's)">Department Of Orthopedic Surgery And Traumatology (Gent's)</option>
 <option value="Upazila Health Complex, Sadar Rangpur">Upazila Health Complex, Sadar Rangpur</option>
 <option value="Satkhira Sadar Hospital">Satkhira Sadar Hospital</option>
 <option value="Shariatpur Sadar Hospital">Shariatpur Sadar Hospital</option>
 <option value="District Hospital, Sherpur">District Hospital, Sherpur</option>
-<option value="Sheikh Fazilatunnessa Mujib General Hospital, Sirajganj">Sheikh Fazilatunnessa Mujib General Hospital,
-    Sirajganj</option>
+<option value="Sheikh Fazilatunnessa Mujib General Hospital, Sirajganj">Sheikh Fazilatunnessa Mujib General Hospital, Sirajganj</option>
 <option value="Sunamganj Sadar Hospital">Sunamganj Sadar Hospital</option>
 <option value="Sylhet District Hospital">Sylhet District Hospital</option>
 <option value="Tangail 250 Bed District Hospital">Tangail 250 Bed District Hospital</option>
