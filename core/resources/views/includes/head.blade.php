@@ -52,6 +52,9 @@
             color: #012970;
             font-family: "Bangla259", sans-serif;
         }
+        .text-orange {
+            color:#ff5500!important ;
+        }
 
         /* button-sections */
         .btn-orange{

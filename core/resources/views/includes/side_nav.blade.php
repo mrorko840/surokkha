@@ -46,11 +46,11 @@
 
                 <div class="sb-sidenav-menu-heading">হেল্প</div>
                 <a class="nav-link" target="_blank" href="{{@$control->support_link}}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-headset text-orange"></i></div>
                     সাপোর্ট সেন্টার
                 </a>
                 <a class="nav-link" href="{{route('logout')}}">
-                    <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <div class="sb-nav-link-icon"><i class="fa-solid fa-right-from-bracket text-danger"></i></div>
                     লগ-আউট
                 </a>
                 <a class="nav-link" href="javascript:void(0)">
