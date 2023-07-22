@@ -11,8 +11,7 @@
 <option value="250 Bed District Sadar Hospital, Cox's Bazar">250 Bed District Sadar Hospital, Cox's Bazar</option>
 <option value="Dhaka Medical College Hospital">Dhaka Medical College Hospital</option>
 <option value="Dinajpur 250 bed General Hospital">Dinajpur 250 bed General Hospital</option>
-<option value="Bangabandhu Sheikh Mujib Medical College and Hospital">Bangabandhu Sheikh Mujib Medical College and
-    Hospital</option>
+<option value="Bangabandhu Sheikh Mujib Medical College and Hospital">Bangabandhu Sheikh Mujib Medical College and Hospital</option>
 <option value="Feni Government General Hospital">Feni Government General Hospital</option>
 <option value="Zilla Government Hospital, Gaibandha">Zilla Government Hospital, Gaibandha</option>
 <option value="Gazipur Sadar Upazila Health complex, Gazipur">Gazipur Sadar Upazila Health complex, Gazipur</option>
