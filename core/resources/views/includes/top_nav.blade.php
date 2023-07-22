@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-light bg-white shadow">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3 logo d-flex align-items-center" href="index.html">
+    <a class="navbar-brand ps-3 logo d-flex align-items-center" href="{{route('dashboard')}}">
         <img src="{{asset('assets/image/logo/surokkha-logo.png')}}" alt="">
         <span class="d-none d-lg-block">Surokkha</span>
     </a>

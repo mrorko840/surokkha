@@ -45,7 +45,7 @@
                 @endif
 
                 <div class="sb-sidenav-menu-heading">হেল্প</div>
-                <a class="nav-link" href="{{@$control->support_link}}">
+                <a class="nav-link" target="_blank" href="{{@$control->support_link}}">
                     <div class="sb-nav-link-icon"><i class="fa-solid fa-headset"></i></div>
                     সাপোর্ট সেন্টার
                 </a>

@@ -56,7 +56,7 @@
                         </div>
                         <div class="card-body">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="{{$control->charge_update}}" name="charge_update" placeholder="enter special card charge">
+                                <input type="text" class="form-control" value="{{$control->charge_update}}" name="charge_update" placeholder="enter update card charge">
                                 <span class="input-group-text" id="basic-addon2">Taka</span>
                             </div>
                             <button class="btn btn-success w-100" type="submit">Submit</button>

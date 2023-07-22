@@ -1,6 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
+
+    <!-- notify -->
+    @include('includes.notify')
+    
     <div class="container-fluid px-4">
         <h3 class="mt-4 mb-0">All Cards</h3>
         <ol class="breadcrumb mb-3">
@@ -61,12 +65,15 @@
                                         <td><b>#{{ $card->certificate_no }}</b></td>
                                         <td>{{ date_format(date_create($card->created_at), 'd/m/Y') }}</td>
                                         <td>
-                                            <a class="btn btn-sm btn-success rounded-circle" href="#"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a>
-                                            <a class="btn btn-sm btn-danger rounded-circle" href="#"><i
-                                                    class="fa-solid fa-trash"></i></a>
-                                            <a class="btn btn-sm btn-info rounded-circle" href="{{route('card.print.details', $card->id)}}"><i
-                                                    class="fa-solid fa-download"></i></a>
+                                            <a class="btn btn-sm btn-success rounded-circle" href="{{route('card.edit', Crypt::encryptString($card->id))}}">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </a>
+                                            <a class="btn btn-sm btn-danger rounded-circle dltBtn" data-action="{{route('delete.card', Crypt::encryptString($card->id))}}">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                            <a class="btn btn-sm btn-info rounded-circle" href="{{route('card.print.details', Crypt::encryptString($card->id))}}">
+                                                <i class="fa-solid fa-download"></i>
+                                            </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -78,3 +85,27 @@
         </div>
     </div>
 @endsection
+@push('script')
+    <script>
+        // delete card
+        $(document).on('click', '.dltBtn', function () {
+            let id = $(this).data('id');
+            let action = $(this).data('action');
+
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = action;
+                }
+            })
+
+        });
+    </script>
+@endpush

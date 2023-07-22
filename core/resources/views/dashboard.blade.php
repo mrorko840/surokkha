@@ -55,8 +55,9 @@
                                         <td>{{ $card->nationality }}</td>
                                         <td>{{ $card->gender }}</td>
                                         <td>
-                                            <a class="btn btn-sm btn-success rounded-circle" href="#"><i
-                                                    class="fa-solid fa-pen-to-square"></i></a>
+                                            <a class="btn btn-sm btn-success rounded-circle" href="{{route('card.edit', Crypt::encryptString($card->id))}}">
+                                                <i class="fa-solid fa-pen-to-square"></i>
+                                            </a>
                                             <a class="btn btn-sm btn-danger rounded-circle dltBtn" data-action="{{route('delete.card', Crypt::encryptString($card->id))}}">
                                                 <i class="fa-solid fa-trash"></i>
                                             </a>

@@ -2,9 +2,9 @@
 
 @section('content')
     <div class="container-fluid px-4">
-        <h3 class="mt-4 mb-0">Recharge</h3>
+        <h3 class="mt-4 mb-0">Pending Recharge</h3>
         <ol class="breadcrumb mb-3">
-            <li class="breadcrumb-item active">Home / Recharge</li>
+            <li class="breadcrumb-item active">Home / Pending Recharge</li>
         </ol>
         <div class="row">
             <div class="col-12">
