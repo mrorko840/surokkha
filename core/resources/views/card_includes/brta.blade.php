@@ -1454,11 +1454,15 @@
                             $split = explode(" ", $vacc_center);
                             $newArray = array_slice($split, 0, 2);
                             $last = array_slice($split, 2, 3);
+                            $end = array_slice($split, 5, 7);
                             $hos = implode(' ', $newArray);
                             $host_last = implode(' ', $last);
+                            $host_end = implode(' ', $end);
                             echo $hos;
                             echo "</br>";
                             echo $host_last;
+                            echo "</br>";
+                            echo $host_end;
                             ?> </span>
 
     <span class="g r g19">Vaccinated By:</span>

@@ -183,8 +183,8 @@
                 contentType: false,
                 processData: false,
                 success: function(res) {
+                    notifyMsg(res.msg, res.cls)
                     if (res.cls === 'success') {
-                        notifyMsg(res.msg, res.cls)
                         $('#cardSubmit')[0].reset()
                         $('#certificate_no').val("{{'BD'.rand(100000000000, 999999999999)}}");
                     }

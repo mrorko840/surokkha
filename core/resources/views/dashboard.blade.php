@@ -55,7 +55,7 @@
                                                     class="fa-solid fa-pen-to-square"></i></a>
                                             <a class="btn btn-sm btn-danger rounded-circle" href="#"><i
                                                     class="fa-solid fa-trash"></i></a>
-                                            <a class="btn btn-sm btn-info rounded-circle" href="{{route('card.print.details', $card->id)}}"><i
+                                            <a class="btn btn-sm btn-info rounded-circle" href="{{route('card.print.details', Crypt::encryptString($card->id))}}"><i
                                                     class="fa-solid fa-download"></i></a>
                                         </td>
                                     </tr>

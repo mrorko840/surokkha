@@ -32,7 +32,7 @@
                     <div class="card mb-3 border border-2 border-success bg-white shadow">
                         <div class="card-header">
                             <h5 class="mb-0 text-success">
-                                <i class="fa-solid fa-credit-card"></i> Charge for Normal Card
+                                <i class="fa-solid fa-credit-card"></i> Charge for Make Card
                             </h5>
                         </div>
                         <div class="card-body">
@@ -51,12 +51,12 @@
                     <div class="card mb-3 border border-2 border-success bg-white shadow">
                         <div class="card-header">
                             <h5 class="mb-0 text-success">
-                                <i class="fa-solid fa-credit-card"></i> Charge for Special Card
+                                <i class="fa-solid fa-credit-card"></i> Charge for Update Card
                             </h5>
                         </div>
                         <div class="card-body">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" value="{{$control->charge_special}}" name="charge_special" placeholder="enter special card charge">
+                                <input type="text" class="form-control" value="{{$control->charge_update}}" name="charge_update" placeholder="enter special card charge">
                                 <span class="input-group-text" id="basic-addon2">Taka</span>
                             </div>
                             <button class="btn btn-success w-100" type="submit">Submit</button>
@@ -122,6 +122,35 @@
             </div>
         </div>
     </div>
+
+
+    {{-- <div class="container">
+        <div class="card">
+            <div class="card-body">
+                @php
+                    $vacc_center = 'Upazila Health Complex, Chandina, love gg';
+                    $split = explode(" ", $vacc_center);
+                    $newArray = array_slice($split, 0, 2);
+                    $last = array_slice($split, 2, 3);
+                    $end = array_slice($split, 5, 7);
+                    $hos = implode(' ', $newArray);
+                    $host_last = implode(' ', $last);
+                    $host_end = implode(' ', $end);
+                    echo $vacc_center;
+                    echo '</br>';
+                    print_r($newArray);
+                    echo '</br>';
+                    print_r($last);
+                    echo '</br>';
+                    echo $hos;
+                    echo '</br>';
+                    echo $host_last;
+                    echo '</br>';
+                    echo $host_end;
+                    @endphp
+            </div>
+        </div>
+    </div> --}}
 @endsection
 @push('script')
 <script>

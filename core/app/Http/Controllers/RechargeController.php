@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Recharge;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,7 +23,12 @@ class RechargeController extends Controller
             'trx'       => 'required',
             'amount'    => 'required|numeric',
         ]);
-        // $recharge = Recharge::where('id', $request->id)->first();
+        $control = Setting::first();
+
+        if ($control->recharge_limit > $request->amount) {
+            return response()->json(['msg'=>'Minimum recharge Limit '.round($control->recharge_limit).' Taka','cls'=>'error']);
+        }
+
         $recharge           = new Recharge();
         $recharge->user_id  = Auth::user()->id;
         $recharge->method   = $request->method;

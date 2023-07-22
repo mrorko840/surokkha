@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Card;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class CardController extends Controller
 {
@@ -18,23 +19,22 @@ class CardController extends Controller
         $request->validate([
             'certificate_no'   => ['required','unique:'.Card::class],
             'type'             => 'required',
-            // 'nid_no'           => 'required',
-            // 'birth_no'         => 'required',
-            // 'passport_no'      => 'required',
             'nationality'      => 'required',
             'name'             => 'required',
             'dob'              => 'required',
             'gender'           => 'required',
-            // 'dose1date'        => 'required',
-            // 'dose1name'        => 'required',
-            // 'dose2date'        => 'required',
-            // 'dose2name'        => 'required',
-            // 'dose3date'        => 'required',
-            // 'dose3name'        => 'required',
             'vaccin_center'    => 'required',
             'vaccin_by'        => 'required',
             'total_dose'       => 'required',
         ]);
+
+        $user = auth()->user();
+        if ($user->balance < $user->cost) {
+            $msg = "আপনার পর্যাপ্ত পরিমাণ ব্যালেন্স নেই দয়া করে রিচার্জ করুন!";
+            return response()->json(['msg'=>$msg, 'cls'=>'error']);
+        }
+        $user->balance -= $user->cost;
+        $user->save();
 
         $card = new Card();
         $card->user_id          = auth()->user()->id;
@@ -63,6 +63,7 @@ class CardController extends Controller
     }
 
     public function printDetails($id = null){
+        $id = Crypt::decryptString($id);
         $card = Card::findOrFail($id);
         return view('print_details', compact('card'));
     }

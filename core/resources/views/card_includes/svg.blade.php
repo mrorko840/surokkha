@@ -148,10 +148,12 @@
 							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:7.4932pt; white-space:pre" transform="matrix(1 0 0 -1 339.852 376.251)" x="0 6.664 12.219 17.2145 22.21 24.428 29.983 35.538 38.3155 40.5335 46.0885 51.6435 54.421 61.6345 67.1895 72.7445 75.522 81.077 84.404">Vaccination Center:</text></g><g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:7.4932pt; white-space:pre" transform="matrix(1 0 0 -1 355.559 364.262)" x="0 2.2779 7.2435 14.0873 16.5151 19.2926 25.7068 31.4417 33.8695 37.4063 42.7815 47.737 50.5145 53.7516 60.5954 68.7281">িটকা দােনর ক:</text></g><?php
 							$vacc_center = $card->vaccin_center;
 							$split = explode(" ", $vacc_center);
-							$newArray = array_slice($split, 0, 3);
-							$last = array_slice($split, 3, 3);
+							$newArray = array_slice($split, 0, 2);
+							$last = array_slice($split, 2, 3);
+                            $end = array_slice($split, 5, 7);
 							$hos = implode(' ', $newArray);
 							$host_last = implode(' ', $last);
+                            $host_end = implode(' ', $end);
 							?>
 
 							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:sans-serif; font-size:7.4932pt; white-space:pre" transform="matrix(1 0 0 -1 434.885 376.251)"><?php echo $hos; ?> </text></g>

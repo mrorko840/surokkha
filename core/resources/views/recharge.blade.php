@@ -150,8 +150,8 @@
                 contentType: false,
                 processData: false,
                 success: function(res) {
+                    notifyMsg(res.msg, res.cls)
                     if (res.cls === 'success') {
-                        notifyMsg(res.msg, res.cls)
                         $('#newRecharge')[0].reset()
                         setTimeout(() => {
                             getRechargeHistory() //load tabel body again
