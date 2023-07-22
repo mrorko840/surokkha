@@ -8,7 +8,7 @@
         </ol>
         <div class="row">
             <div class="col-12">
-                <div class="card mb-4 border border-2 border-danger bg-white shadow">
+                <div class="card mb-4 border border-2 border-danger bg-white">
                     <div class="card-body">
                         <h5 class="mb-2 text-danger">
                             <i class="fa-solid fa-bell text-danger"></i> Recharge Notice
@@ -20,7 +20,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="card mb-3 border border-2 border-danger bg-white shadow">
+                <div class="card mb-3 border border-2 border-danger bg-white">
                     <div class="card-header">
                         <h5 class="mb-0 text-danger">
                             <i class="fa-solid fa-sack-dollar"></i> Recharge Balance
@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <div class="card mb-3 border border-2 border-danger bg-white shadow">
+                <div class="card mb-3 border border-2 border-danger bg-white">
                     <div class="card-header">
                         <h5 class="mb-0 text-danger">
                             <i class="fa-solid fa-sack-dollar"></i> Recharge History

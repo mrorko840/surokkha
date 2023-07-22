@@ -56,6 +56,25 @@
             color:#ff5500!important ;
         }
 
+        .border-primary {
+            box-shadow: 0 3px 10px #0d6efd70 !important;
+        }
+        .border-warning {
+            box-shadow: 0 3px 10px #ffc00870 !important;
+        }
+        .border-danger {
+            box-shadow: 0 3px 10px #ed1d3270 !important;
+        }
+        .border-success {
+            box-shadow: 0 3px 10px #19875470 !important;
+        }
+        .border-orange {
+            box-shadow: 0 3px 10px #ff550070 !important;
+        }
+        .border-info {
+            box-shadow: 0 3px 10px #0dcaf070 !important;
+        }
+
         /* button-sections */
         .btn-orange{
             color: #fff;
