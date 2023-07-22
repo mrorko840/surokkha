@@ -21,6 +21,9 @@ Route::middleware(['auth', 'verified'])->group(function(){
     //card
     Route::get('new-card', [CardController::class, 'newCard'])->name('new.card');
     Route::post('new-card-store', [CardController::class, 'newCardStore'])->name('new.card.store');
+    Route::get('new-edit/{id}', [CardController::class, 'cardEdit'])->name('new.edit');
+    Route::post('card-update/{id}', [CardController::class, 'cardUpdate'])->name('card.update');
+    Route::get('delete-card/{id?}', [CardController::class, 'deleteCard'])->name('delete.card');
     Route::get('print-details/{id?}', [CardController::class, 'printDetails'])->name('card.print.details');
 
 

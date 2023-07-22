@@ -119,7 +119,7 @@
 
 
 
-							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:sans-serif; font-size:7.4932pt" transform="matrix(1 0 0 -1 168.245 449.829)"> <?php echo $card->nid_no; ?> </text></g>
+							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:sans-serif; font-size:7.4932pt" transform="matrix(1 0 0 -1 168.245 449.829)"> <?php echo $type == 'nid' ? $card->nid_no : $card->birth_no; ?> </text></g>
 							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:7.4932pt; white-space:pre" transform="matrix(1 0 0 -1 296.54 455.824)" x="0 7.2135 12.7685 15.546 21.101 23.8785 29.4335 32.211 34.9885 41.6525 47.2075 52.203 57.1985 59.4165 64.9715 70.5265 73.304 75.522 81.077 86.632 89.4095 92.7365 99.95 105.505 110.5005 116.0555 118.833 124.388 127.715">Date of Vaccination (Dose 2):</text></g>
 							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:7.4932pt; white-space:pre" transform="matrix(1 0 0 -1 314.664 443.835)" x="0 2.2779 7.2435 14.0873 16.5151 19.2926 25.7068 31.4417 33.8695 37.4063 42.7815 47.737 50.5145 57.1285 59.5564 61.8343 66.7898 72.6146 75.3921 78.7191 81.9562 88.2205 90.6483 97.742 100.5195 106.2643 109.5913">িটকা দােনর তািরখ (ডাজ ২):</text></g>
 							<g clip-path="url(#clip0-3)"><text stroke="none" fill="#000" style="font-family:sans-serif; font-size:7.4932pt" transform="matrix(1 0 0 -1 434.885 449.829)"> <?php echo $card->dose2date ? showDate($card->dose2date) : ''; ?> </text></g>
