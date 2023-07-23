@@ -56,6 +56,7 @@
             color:#ff5500!important ;
         }
 
+        /* border-shadow */
         .border-primary {
             box-shadow: 0 3px 10px #0d6efd70 !important;
         }

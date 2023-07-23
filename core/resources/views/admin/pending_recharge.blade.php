@@ -22,6 +22,7 @@
                                         <th scope="col">#</th>
                                         <th scope="col">Method</th>
                                         <th scope="col">Username</th>
+                                        <th scope="col">Number</th>
                                         <th scope="col">Amount</th>
                                         <th scope="col">TRX Id</th>
                                         <th scope="col">Date & Time</th>
@@ -34,6 +35,7 @@
                                             <th scope="row">{{$k+1}}</th>
                                             <td>{{ $item->method }}</td>
                                             <td>{{ $item->user->name }}</td>
+                                            <td>{{ $item->number }}</td>
                                             <td>{{ $item->amount }} Taka</td>
                                             <td><b class="text-primary">{{ $item->trx }}</b></td>
                                             <td>{{ date_format($item->created_at, 'M d, H:i a') }}</td>

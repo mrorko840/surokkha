@@ -43,6 +43,7 @@
                                     <th>Balance</th>
                                     <th>Cost</th>
                                     <th>Email</th>
+                                    <th>Number</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -54,6 +55,7 @@
                                     <th>Balance</th>
                                     <th>Cost</th>
                                     <th>Email</th>
+                                    <th>Number</th>
                                     <th>Action</th>
                                 </tr>
                             </tfoot>
@@ -79,6 +81,7 @@
                                             ৳ {{ round($user->cost) }}
                                         </td>
                                         <td>{{ $user->email }}</td>
+                                        <td>{{ $user->number }}</td>
                                         <td>
                                             <a class="btn btn-sm btn-danger rounded-circle dltBtn" data-id="{{ $user->id }}" data-action="{{ route('delete.user', $user->id) }}">
                                                 <i class="fa-solid fa-trash"></i>
