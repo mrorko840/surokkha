@@ -207,7 +207,7 @@
                             </div>
                             <div class="col-6" style="border: 1px dashed rgb(222, 226, 230)">
                               <div class="cert-verify-content-div" style="font-size: 13px;text-align: left;padding: 5px;overflow-wrap: break-word;">
-                                <?php echo $card->nid_no; ?> <br> </div>
+                                <?php echo $type=='nid' ? $card->nid_no : $card->birth_no; ?> <br> </div>
                             </div>
                           </div>
                           <div class="row m-0">
