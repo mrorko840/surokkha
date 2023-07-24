@@ -172,14 +172,18 @@
                   </g>
 
                     <?php
-                     $str_bt = $card->nid_no;
+                     if ($type == 'nid') {
+                        $str_bt = $card->nid_no;
+                     }else {
+                        $str_bt = $card->birth_no;
+                     }
                      $digitc = strlen("$str_bt");
                      if ($digitc < 16 ) { ?>
-                    <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6402 580.5748)"> <?php $str = $card->nid_no;
+                    <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6402 580.5748)"> <?php if($type == 'nid') {$str = $card->nid_no;}else{$str = $card->birth_no;}
 $parts = str_split($str, 16);
 echo $parts[0]; ?> </text></g>
 <?php } else { ?>
-<g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6402 583.5748)"> <?php $str = $card->nid_no;
+<g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6402 583.5748)"> <?php if($type == 'nid') {$str = $card->nid_no;}else{$str = $card->birth_no;}
 $parts = str_split($str, 16);
 echo $parts[0]; ?> </text></g>
  <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6402 574.5748)"> <?php echo $parts[1]; ?> </text></g>

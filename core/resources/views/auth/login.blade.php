@@ -91,6 +91,7 @@
                                 <button type="submit" class="btn text-light main-bg-2 border-0 shadow">Login</button>
                             </div>
                         </form>
+                        <p class="mt-5 text-center">Don't have Account? <a class="text-success" style="text-decoration: none;" href="{{ route('register') }}">Sign Up</a></p>
                     </div>
                 </div>
             </div>
