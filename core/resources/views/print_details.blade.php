@@ -85,8 +85,8 @@
                      <path d="M 0 0 L 595.28 0 L 595.28 841.89 L 0 841.89 L 0 0 z "></path>
                   </clippath>
                   @if ($card->type == 'nid')
-                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 587.985 L 204.64 587.985 L 204.64 572.385 L 119.89 572.385 z "></path>
-                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 587.985 L 290.89 587.985 L 290.89 572.385 L 206.14 572.385 z "></path>
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 591.985 L 204.64 591.985 L 204.64 572.385 L 119.89 572.385 z "></path>
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 591.985 L 290.89 591.985 L 290.89 572.385 L 206.14 572.385 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 570.885 L 204.64 570.885 L 204.64 560.085 L 119.89 560.085 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 570.885 L 290.89 570.885 L 290.89 560.085 L 206.14 560.085 z "></path>
 
