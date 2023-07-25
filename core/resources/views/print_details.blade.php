@@ -84,11 +84,22 @@
                   <clippath id="clip0-1">
                      <path d="M 0 0 L 595.28 0 L 595.28 841.89 L 0 841.89 L 0 0 z "></path>
                   </clippath>
+                  @if ($card->type == 'nid')
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 587.985 L 204.64 587.985 L 204.64 572.385 L 119.89 572.385 z "></path>
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 587.985 L 290.89 587.985 L 290.89 572.385 L 206.14 572.385 z "></path>
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 570.885 L 204.64 570.885 L 204.64 560.085 L 119.89 560.085 z "></path>
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 570.885 L 290.89 570.885 L 290.89 560.085 L 206.14 560.085 z "></path>
+
+                  <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 722.785 L 290.89 722.785 L 290.89 685.085 L 119.89 685.085 z "></path>
+                  @else
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 593.985 L 204.64 593.985 L 204.64 572.385 L 119.89 572.385 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 593.985 L 290.89 593.985 L 290.89 572.385 L 206.14 572.385 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 570.885 L 204.64 570.885 L 204.64 560.085 L 119.89 560.085 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 570.885 L 290.89 570.885 L 290.89 560.085 L 206.14 560.085 z "></path>
+
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 722.785 L 290.89 722.785 L 290.89 678.085 L 119.89 678.085 z "></path>
+                  @endif
+
                   <path clip-path="url(#clip0-1)" fill="none" stroke="#008000" stroke-width="0.75" stroke-linecap="square" d="M 292.765 793.911 L 292.765 511.06 "></path>
                   <g clip-path="url(#clip0-1)">
                      <g transform="matrix(0.1003 0 0 -0.1003 190.39 792.785)">
@@ -101,7 +112,11 @@
                   <path clip-path="url(#clip0-1)" fill="none" stroke="#ddd" stroke-width="0.75" stroke-linecap="square" d="M 120.265 722.41 L 120.265 678.46 "></path>
                   <path clip-path="url(#clip0-1)" fill="none" stroke="#ddd" stroke-width="0.75" stroke-linecap="square" d="M 120.265 722.41 L 290.515 722.41 "></path>
                   <path clip-path="url(#clip0-1)" fill="none" stroke="#ddd" stroke-width="0.75" stroke-linecap="square" d="M 290.515 722.41 L 290.515 678.46 "></path>
+                  @if ($card->type == 'nid')
+                  <path clip-path="url(#clip0-1)" fill="none" stroke="#ddd" stroke-width="0.75" stroke-linecap="square" d="M 120.265 685.46 L 290.515 685.46 "></path>
+                  @else
                   <path clip-path="url(#clip0-1)" fill="none" stroke="#ddd" stroke-width="0.75" stroke-linecap="square" d="M 120.265 678.46 L 290.515 678.46 "></path>
+                  @endif
                   <g clip-path="url(#clip0-1)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(12 0 0 -12 177.7178 710.8208)" x="0">C</text></g>
                   <clippath id="clip0-3">
                      <path d="M 0 0 L 596 0 L 596 842 L 0 842 L 0 0 z "></path>
@@ -136,7 +151,8 @@
                   <clippath id="clip0-9">
                      <path d="M 0 0 L 596 0 L 596 842 L 0 842 L 0 0 z "></path>
                   </clippath>
-                  <path clip-path="url(#clip0-9)" fill="none" stroke="#fff" stroke-width="0.462" stroke-linecap="round" stroke-linejoin="round" d="M 222.8232 710.8208 L 223.8842 710.8208 L 223.8842 719.3288 L 223.1862 719.3288 L 223.0872 719.0178 C 222.9462 718.5688 222.7702 718.2598 222.5592 718.0918 C 222.3212 717.9008 221.8132 717.7528 221.0362 717.6468 L 220.9422 717.6348 L 220.9422 716.8798 L 222.8232 716.8798 L 222.8232 710.8208 z "></path>
+                  <path clip-path="url(#clip0-9)" fill="none" stroke="#fff" stroke-width="0.462" stroke-linecap="round" stroke-linejoin="round" d="M 222.8232 710.8208 L 223.8842 710.8208 L 223.8842 719.3288 L 223.1862 719.3288 L 223.0872 719.0178 C 222.9462 718.5688 222.7702 718.2598 222.5592 718.0918 C 222.3212 717.9008 221.8132 717.7528 221.0362 717.6468 L 220.9422 717.6348 L 220.9422 716.8798 L 222.8232 716.8798 L 222.8232 710.8208 z ">
+                  </path>
                   <clippath id="clip0-10">
                      <path d="M 0 0 L 595.28 0 L 595.28 841.89 L 0 841.89 L 0 0 z "></path>
                   </clippath>
@@ -148,21 +164,39 @@
                   <clippath id="clip0-12">
                      <path d="M 0 0 L 595.28 0 L 595.28 841.89 L 0 841.89 L 0 0 z "></path>
                   </clippath>
+                  @if ($card->type == 'nid')
+                  <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(12 0 0 -12 143.3682 696.4209)">Vaccination Certificate</text></g>
+
+                  <g clip-path="url(#clip0-12)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 141.125 672.1748)" x="0 0.722 1.278 1.611 1.889 2.111 2.389 2.611 3.111 3.667 3.945 4.501 4.779 5.501 6.057">Certificate No:</text></g>
+                  <g clip-path="url(#clip0-12)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 202.64 672.1748)"> <?php echo $card->certificate_no; ?> </text></g>
+
+                  <g clip-path="url(#clip0-12)">
+                    <g transform="matrix(0.2442 0 0 -0.2442 177.1133 664.5616)">
+                       <image xlink:href="{{makeQr($card->id)}}" width="220" height="220" id="img58-0-13"></image>
+                    </g>
+                 </g>
+
+                  @else
+
                   <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(12 0 0 -12 143.3682 696.4209)" x="0 0.667 1 1.556 2.056 2.278 2.778 3 3.556 4.112 4.668 4.89 5.168 5.835 6.391 6.891 7.391 7.613 8.169 8.725 9.003 9.225 9.781">Provisional Vaccination</text></g>
+
                   <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(12 0 0 -12 178.3842 682.0209)" x="0 0.722 1.278 1.611 1.889 2.111 2.389 2.611 3.111 3.667 3.945">Certificate</text></g>
                   <g clip-path="url(#clip0-12)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 141.125 668.1748)" x="0 0.722 1.278 1.611 1.889 2.111 2.389 2.611 3.111 3.667 3.945 4.501 4.779 5.501 6.057">Certificate No:</text></g>
                   <g clip-path="url(#clip0-12)"><text stroke="none" fill="#000" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 202.64 668.1748)"> <?php echo $card->certificate_no; ?> </text></g>
+
                   <g clip-path="url(#clip0-12)">
-                     <g transform="matrix(0.2442 0 0 -0.2442 182.1133 662.5616)">
-                        <image xlink:href="{{makeQr($card->id)}}" width="207" height="207" id="img58-0-13"></image>
+                     <g transform="matrix(0.2442 0 0 -0.2442 177.1133 662.5616)">
+                        <image xlink:href="{{makeQr($card->id)}}" width="220" height="220" id="img58-0-13"></image>
                      </g>
                   </g>
+                  @endif
+
                   <g clip-path="url(#clip0-12)">
 
                      <?php
                      $type = $card->type;
                      if ($type == 'nid') { ?>
-                      <text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 152.6152 580.1748)" >NID Number</text>
+                      <text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 152.6152 577.1748)" >NID Number</text>
 
                      <?php } else { ?>
                         <text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt; white-space:pre" transform="matrix(9 0 0 -9 124.6152 580.1748)" x="0 0.667 0.889 1.222 1.5 2.056 2.334 3.056 3.612 4.168 4.446 4.724 5.446 6.002 6.335 6.613 6.891 7.169 7.891 8.447">Birth Reg. Cert. No.</text>
@@ -179,7 +213,8 @@
                      }
                      $digitc = strlen("$str_bt");
                      if ($digitc < 16 ) { ?>
-                    <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt" transform="matrix(9 0 0 -9 207.6402 580.5748)"> <?php if($type == 'nid') {$str = $card->nid_no;}else{$str = $card->birth_no;}
+                    <g clip-path="url(#clip0-12)"><text stroke="none" fill="#fff" style="font-family:f0-0; font-size:0.75pt"
+                        @if($type == 'nid') transform="matrix(9 0 0 -9 207.6402 577.5748)" @else transform="matrix(9 0 0 -9 207.6402 580.5748)" @endif> <?php if($type == 'nid') {$str = $card->nid_no;}else{$str = $card->birth_no;}
 $parts = str_split($str, 16);
 echo $parts[0]; ?> </text></g>
 <?php } else { ?>
