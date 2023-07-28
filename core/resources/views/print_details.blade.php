@@ -91,13 +91,16 @@
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 570.885 L 290.89 570.885 L 290.89 560.085 L 206.14 560.085 z "></path>
 
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 722.785 L 290.89 722.785 L 290.89 685.085 L 119.89 685.085 z "></path>
+
                   @else
+
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 593.985 L 204.64 593.985 L 204.64 572.385 L 119.89 572.385 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 593.985 L 290.89 593.985 L 290.89 572.385 L 206.14 572.385 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 570.885 L 204.64 570.885 L 204.64 560.085 L 119.89 560.085 z "></path>
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 206.14 570.885 L 290.89 570.885 L 290.89 560.085 L 206.14 560.085 z "></path>
 
                   <path clip-path="url(#clip0-1)" fill="#008000" stroke="none" d="M 119.89 722.785 L 290.89 722.785 L 290.89 678.085 L 119.89 678.085 z "></path>
+                  
                   @endif
 
                   <path clip-path="url(#clip0-1)" fill="none" stroke="#008000" stroke-width="0.75" stroke-linecap="square" d="M 292.765 793.911 L 292.765 511.06 "></path>
