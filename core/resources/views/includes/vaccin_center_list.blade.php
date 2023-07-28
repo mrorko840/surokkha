@@ -118,4 +118,13 @@
 <option value="Sylhet District Hospital">Sylhet District Hospital</option>
 <option value="Tangail 250 Bed District Hospital">Tangail 250 Bed District Hospital</option>
 <option value="Adhunik Sadar Hospital">Adhunik Sadar Hospital</option>
+<option value="Sheikh Hasina Medical College & Hospital, Tangail">Sheikh Hasina Medical College & Hospital, Tangail</option>
+<option value="SK Hospital, Mymensingh">SK Hospital, Mymensingh</option>
+<option value="Police Hospital, Mymensingh">Police Hospital, Mymensingh</option>
+<option value="Mymensingh Medical Collage Hospital">Mymensingh Medical Collage Hospital</option>
+<option value="Zila Sadar Hospital,Netrokona">Zila Sadar Hospital,Netrokona</option>
+<option value="Zila Sadar Hospital,Sherpur">Zila Sadar Hospital,Sherpur</option>
+<option value="Upazila Health Complex, Fatikchari">Upazila Health Complex, Fatikchari</option>
+<option value="Police Hospital Tangail">Police Hospital Tangail</option>
+<option value="Combined Military Hospital, Tangail">Combined Military Hospital, Tangail</option>
 <option value="other">Other</option>
