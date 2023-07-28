@@ -87,6 +87,7 @@ class CardController extends Controller
             'vaccin_by'        => 'required',
             'total_dose'       => 'required',
         ]);
+        
 
         $id = Crypt::decryptString($id);
 
